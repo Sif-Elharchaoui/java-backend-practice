@@ -13,6 +13,7 @@ Java 25 (LTS) · IntelliJ IDEA
 |---|---|---|
 | 01 | Conditionals, loop constructs (`for`/`while`/`do-while`), character/ASCII comparison, digit manipulation (Fibonacci sequence, digit counting, integer reversal), an interactive calculator with guarded division and invalid-input handling | [`week1/day1`](src/week1/day1) |
 | 02 | Switch statements (classic, enhanced, nested), method design (pass-by-value semantics, variable scope, overloading), classic algorithms (factorial, GCD via Euclidean algorithm, primality testing, Armstrong numbers), manual string manipulation (reversal and palindrome checks via two-pointer technique) | [`week1/day2`](src/week1/day2) |
+| 03 | Arrays and the stack/heap memory model, aggregation methods (max, min, sum), in-place reversal via two-pointer swapping | [`week1/day3`](src/week1/day3) |
 
 ## Conventions
 - One method, one responsibility
