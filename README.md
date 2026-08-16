@@ -15,6 +15,7 @@ Java 25 (LTS) · IntelliJ IDEA
 | 02 | Switch statements (classic, enhanced, nested), method design (pass-by-value semantics, variable scope, overloading), classic algorithms (factorial, GCD via Euclidean algorithm, primality testing, Armstrong numbers), manual string manipulation (reversal and palindrome checks via two-pointer technique) | [`week1/day2`](src/week1/day2) |
 | 03 | Arrays and the stack/heap memory model, aggregation methods (max, min, sum), in-place reversal via two-pointer swapping | [`week1/day3`](src/week1/day3) |
 | 04 | 2D arrays (indexing, dynamic input reading, row-sum transformation to 1D, classic vs enhanced-for printing), matrix operations (diagonal sum, transpose), ArrayList fundamentals with full CRUD and a written Array-vs-ArrayList comparison | [`week1/day4`](src/week1/day4) |
+| 05 | Applied project: a menu-driven Student Tracker CLI built on parallel ArrayLists (name/grade). Full CRUD with duplicate-name and grade-range validation, linear search, a manual highest-to-lowest sort with synchronized swaps across both lists, and aggregate statistics (average, highest, lowest) | [`week1/day5`](src/week1/day5) |
 
 ## Conventions
 - One method, one responsibility
