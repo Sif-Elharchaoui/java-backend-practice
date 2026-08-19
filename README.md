@@ -23,6 +23,8 @@ Java 25 (LTS) · IntelliJ IDEA
 |---|---|---|
 | 01 | Classes and objects, the stack/heap object memory model, encapsulation (private fields with validated access), constructors and constructor overloading via `this(...)` chaining, the `this` keyword for resolving field/parameter naming collisions — applied to a `BankAccount` class with Scanner-driven input/output | [`week1/OOP`](src/week1/OOP) |
 | 02 | Inheritance via `extends`, the `super` keyword for invoking a parent constructor, method overriding with `@Override`, IS-A relationships modeled through a `Shape` hierarchy (`Circle`, `Rectangle`, `Triangle`) each computing their own area and perimeter while inheriting shared identity from the parent | [`week1/OOP`](src/week1/OOP) |
+| 03 | Polymorphism and dynamic method dispatch — iterating over a `Shape[]` array where each element resolves to its own overridden `area()`/`perimeter()` at runtime, without type-checking branches | [`week1/OOP`](src/week1/OOP) |
+| 03 | Polymorphism via dynamic method dispatch — iterating a `Shape[]` holding mixed subclass instances and calling `area()`/`perimeter()` without type checks, each object resolving to its own overridden implementation at runtime | [`week1/OOP`](src/week1/OOP) |
 
 ## Conventions
 - One method, one responsibility
