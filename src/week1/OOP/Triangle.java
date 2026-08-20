@@ -1,6 +1,6 @@
 package week1.OOP;
 
-public class Triangle extends Shape {
+public class Triangle extends Shape implements Drawable {
     private double base;
     private double height;
     private double sideA;
@@ -24,5 +24,10 @@ public class Triangle extends Shape {
     @Override
     public double perimeter() {
         return sideA + sideB + sideC;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Drawing a triangle with base " + base + " and height " + height);
     }
 }

@@ -1,6 +1,6 @@
 package week1.OOP;
 
-public class Rectangle extends Shape {
+public class Rectangle extends Shape implements Drawable {
     private double width;
     private double height;
 
@@ -18,5 +18,10 @@ public class Rectangle extends Shape {
     @Override
     public double perimeter() {
         return 2 * (width + height);
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Drawing a rectangle " + width + "x" + height);
     }
 }

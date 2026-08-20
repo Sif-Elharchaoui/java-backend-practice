@@ -1,6 +1,6 @@
 package week1.OOP;
 
-public class Circle extends Shape {
+public class Circle extends Shape implements Drawable {
     private double radius;
 
     public Circle(double radius) {
@@ -16,5 +16,10 @@ public class Circle extends Shape {
     @Override
     public double perimeter() {
         return 2 * Math.PI * radius;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Drawing a circle with radius " + radius);
     }
 }

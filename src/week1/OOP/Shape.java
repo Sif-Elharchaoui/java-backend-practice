@@ -1,6 +1,6 @@
 package week1.OOP;
 
-public class Shape {
+public abstract class Shape {
     private String name;
 
     public Shape(String name) {
@@ -11,11 +11,6 @@ public class Shape {
         return name;
     }
 
-    public double area() {
-        return 0;
-    }
-
-    public double perimeter() {
-        return 0;
-    }
+    public abstract double area();
+    public abstract double perimeter();
 }
