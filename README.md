@@ -31,7 +31,7 @@ Encapsulation (private fields with validated access), constructors and construct
 
 ## Collections
 
-HashMap fundamentals — CRUD operations and the key-value lookup pattern applied to real text processing.
+HashMap fundamentals — CRUD operations and the key-value counting pattern applied to real text processing, including why iteration order is not guaranteed. HashSet for O(n) deduplication of a real user list, replacing the O(n²) nested-loop comparison used earlier.
 
 | Topic | Files |
 |---|---|
