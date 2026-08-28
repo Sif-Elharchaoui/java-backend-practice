@@ -37,6 +37,14 @@ HashMap fundamentals — CRUD operations and the key-value counting pattern appl
 |---|---|
 | HashMap | [`collections/hashmap`](src/collections/hashmap) |
 
+## Generics
+
+A generic `Stack<T>` built entirely from scratch — no `java.util.Stack`, no Collections API — backed by a plain `Object[]` array with manual resizing when capacity is exceeded. Demonstrates type parameters, unchecked casting with `@SuppressWarnings`, and LIFO (Last In, First Out) semantics.
+
+| Topic | Files |
+|---|---|
+| Generic Stack | [`generics/stack`](src/generics/stack) |
+
 ## Applied Projects
 
 Larger builds combining multiple concepts into a single working system, tested against edge cases rather than just the happy path.
