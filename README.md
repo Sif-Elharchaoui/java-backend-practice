@@ -9,7 +9,7 @@ Java 25 (LTS) · IntelliJ IDEA
 
 ## Fundamentals
 
-Conditionals, loop constructs (`for`/`while`/`do-while`), method design (pass-by-value semantics, variable scope, overloading), classic algorithms (factorial, GCD via Euclidean algorithm, primality testing, Armstrong numbers), manual string manipulation (reversal and palindrome checks via two-pointer technique), arrays and the stack/heap memory model, 2D arrays and matrix operations (diagonal sum, transpose), ArrayList with full CRUD, and an interactive calculator with guarded division and invalid-input handling.
+Conditionals, loop constructs (`for`/`while`/`do-while`), method design (pass-by-value semantics, variable scope, overloading), classic algorithms (factorial, GCD via Euclidean algorithm, primality testing, Armstrong numbers), manual string manipulation (reversal and palindrome checks via two-pointer technique), arrays and the stack/heap memory model, 2D arrays and matrix operations (diagonal sum, transpose), ArrayList with full CRUD, and an interactive calculator combining `try`/`catch`/`finally` exception handling with input validation.
 
 | Topic | Files |
 |---|---|
@@ -18,7 +18,7 @@ Conditionals, loop constructs (`for`/`while`/`do-while`), method design (pass-by
 | Methods & algorithms | [`fundamentals/methods`](src/fundamentals/methods) |
 | Arrays & 2D arrays | [`fundamentals/arrays`](src/fundamentals/arrays) |
 | ArrayList | [`fundamentals/arraylist`](src/fundamentals/arraylist) |
-| Calculator (loops, break, safe division) | [`fundamentals/calculator`](src/fundamentals/calculator) |
+| Calculator (try/catch/finally, InputMismatchException, ArithmeticException) | [`fundamentals/calculator`](src/fundamentals/calculator) |
 
 ## Object-Oriented Programming
 
