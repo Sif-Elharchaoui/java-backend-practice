@@ -22,23 +22,22 @@ public class BankAccount {
         return balance;
     }
 
-    public void deposit(double amount) {
-        if (amount > 0) {
-            balance += amount;
-            System.out.println("Deposited: " + amount);
-        } else {
-            System.out.println("Invalid deposit amount.");
+    public void deposit(double amount) throws InvalidAmountException {
+        if (amount <= 0) {
+            throw new InvalidAmountException("Deposit amount must be positive: " + amount);
         }
+        balance += amount;
+        System.out.println("Deposited: " + amount);
     }
 
-    public void withdraw(double amount) {
+    public void withdraw(double amount) throws InvalidAmountException {
         if (amount <= 0) {
-            System.out.println("Invalid withdrawal amount.");
-        } else if (amount > balance) {
-            System.out.println("Insufficient funds.");
-        } else {
-            balance -= amount;
-            System.out.println("Withdrew: " + amount);
+            throw new InvalidAmountException("Withdrawal amount must be positive: " + amount);
         }
+        if (amount > balance) {
+            throw new InvalidAmountException("Insufficient funds: balance is " + balance + ", requested " + amount);
+        }
+        balance -= amount;
+        System.out.println("Withdrew: " + amount);
     }
 }
