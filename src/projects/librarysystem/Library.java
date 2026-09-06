@@ -1,78 +1,52 @@
 package projects.librarysystem;
 
-public class LibraryDemo {
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 
-    public static void main(String[] args) {
+public class Library {
+    private HashMap<String, Book> catalog;
+    private List<Loan> activeLoans;
 
-        // Create books
-        Book book1 = new Book(
-                "Clean Code",
-                "Robert C. Martin"
-        );
+    public Library() {
+        catalog = new HashMap<>();
+        activeLoans = new ArrayList<>();
+    }
 
-        Book book2 = new Book(
-                "Effective Java",
-                "Joshua Bloch"
-        );
+    public void addBook(Book book) {
+        catalog.put(book.getTitle(), book);
+    }
 
-        Book book3 = new Book(
-                "Java Concurrency in Practice",
-                "Brian Goetz"
-        );
-
-        // Create members
-        Member member1 = new Member("Sif", 101);
-        Member member2 = new Member("Ahmed", 102);
-
-        System.out.println("==============================");
-        System.out.println("       LIBRARY SYSTEM");
-        System.out.println("==============================");
-
-        System.out.println();
-        System.out.println("Book: " + book1.getTitle());
-        System.out.println("Author: " + book1.getAuthor());
-        System.out.println("Available: " + book1.isAvailable());
-
-        // Borrow the book
-        System.out.println();
-        System.out.println("Creating loan...");
-
-        if (book1.isAvailable()) {
-
-            Loan loan1 = new Loan(
-                    book1,
-                    member1,
-                    "2026-08-23"
-            );
-
-            loan1.printLoanInfo();
-
-            System.out.println(
-                    "Book available: " + book1.isAvailable()
-            );
-
-            // Try borrowing the same book again
-            System.out.println();
-            System.out.println("Trying to borrow the same book again...");
-
-            if (!book1.isAvailable()) {
-                System.out.println("Book unavailable.");
-            }
-
-            // Return the book
-            System.out.println();
-            System.out.println("Returning book...");
-
-            loan1.returnBook();
-
-            System.out.println(
-                    "Book available: " + book1.isAvailable()
-            );
+    public Book findBook(String title) throws BookNotFoundException {
+        Book book = catalog.get(title);
+        if (book == null) {
+            throw new BookNotFoundException("No book found with title: " + title);
         }
+        return book;
+    }
 
-        System.out.println();
-        System.out.println("==============================");
-        System.out.println("          END");
-        System.out.println("==============================");
+    public Loan borrowBook(String title, Member member, String date)
+            throws BookNotFoundException, BookUnavailableException {
+        Book book = findBook(title);
+        if (!book.isAvailable()) {
+            throw new BookUnavailableException("Book is currently unavailable: " + title);
+        }
+        Loan loan = new Loan(book, member, date);
+        activeLoans.add(loan);
+        return loan;
+    }
+
+    public void returnBook(String title) throws BookNotFoundException {
+        Iterator<Loan> it = activeLoans.iterator();
+        while (it.hasNext()) {
+            Loan loan = it.next();
+            if (loan.getBook().getTitle().equals(title)) {
+                loan.returnBook();
+                it.remove();
+                return;
+            }
+        }
+        throw new BookNotFoundException("No active loan found for: " + title);
     }
 }
