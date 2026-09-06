@@ -1,7 +1,6 @@
 package projects.librarysystem;
 
 public class Loan {
-
     private Book book;
     private Member member;
     private String borrowDate;
@@ -10,25 +9,21 @@ public class Loan {
         this.book = book;
         this.member = member;
         this.borrowDate = borrowDate;
-
         book.setAvailable(false);
+    }
+
+    public Book getBook() {
+        return book;
     }
 
     public void returnBook() {
         book.setAvailable(true);
-
-        System.out.println(
-                book.getTitle() + " returned by " + member.getName()
-        );
+        System.out.println(book.getTitle() + " returned by " + member.getName());
     }
 
     public void printLoanInfo() {
         System.out.println(
-                member.getName()
-                        + " borrowed \""
-                        + book.getTitle()
-                        + "\" on "
-                        + borrowDate
+                member.getName() + " borrowed \"" + book.getTitle() + "\" on " + borrowDate
         );
     }
 }
