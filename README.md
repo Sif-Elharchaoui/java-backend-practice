@@ -58,4 +58,6 @@ Larger builds combining multiple concepts into a single working system, tested a
 - One method, one responsibility
 - Every exercise includes tested edge cases, not just the happy path
 - Package structure organized by topic (`fundamentals`, `oop`, `collections`, `projects`), not by day or week
-- Commit messages follow `feat:` / `fix:` / `docs:` / `test:` / `chore:` prefixes
+- Commit messages follow `feat:` / `fix:` / `docs:` / `test:` / `chore:` prefixes"" 
+"## Week 5 ¡ª Git & SQL" 
+"Starting Git branching practice and SQL fundamentals." 
